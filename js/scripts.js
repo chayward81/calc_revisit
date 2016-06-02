@@ -38,4 +38,13 @@ $(document).ready(function() {
     var subResult = subtract(subNumber1, subNumber2);
     $("#subOutput").text(subResult);
   });
+
+  $("form#multiply").submit(function(event) {
+    event.preventDefault();
+    var multNumber1 = parseInt($("#mult1").val());
+    var multNumber2 = parseInt($("#mult2").val());
+    var multResult = multiply(multNumber1, multNumber2);
+    $("#multOutput").text(multResult);
+  });
+
 });
