@@ -12,7 +12,7 @@ var multiply = function(number1, number2) {
 };
 
 var divide = function(number1, number2) {
-  return number1 / number2;
+  return number1/number2;
 };
 
 var mod = function(number1, number2) {
@@ -45,6 +45,14 @@ $(document).ready(function() {
     var multNumber2 = parseInt($("#mult2").val());
     var multResult = multiply(multNumber1, multNumber2);
     $("#multOutput").text(multResult);
+  });
+
+  $("form#divide").submit(function(event) {
+    event.preventDefault();
+    var divideNumber1 = parseInt($("#divide1").val());
+    var divideNumber2 = parseInt($("#divide2").val());
+    var divideResult = divide(divideNumber1, divideNumber2);
+    $("#divideOutput").text(divideResult);
   });
 
 });
