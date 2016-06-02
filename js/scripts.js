@@ -22,11 +22,20 @@ var mod = function(number1, number2) {
 
 // Front End Logic
 $(document).ready(function() {
+
   $("form#add").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt(prompt("Enter the first number for calculation"));
-    var number2 = parseInt(prompt("Enter the second number for calculation"));
-    var result = add(number1, number2);
-    $("#output").text(result);
+    var addNumber1 = parseInt($("#add1").val());
+    var addNumber2 = parseInt($("#add2").val());
+    var addResult = add(addNumber1, addNumber2);
+    $("#addOutput").text(addResult);
+  });
+
+  $("form#subtract").submit(function(event) {
+    event.preventDefault();
+    var subNumber1 = parseInt($("#subtract1").val());
+    var subNumber2 = parseInt($("#subtract2").val());
+    var subResult = subtract(subNumber1, subNumber2);
+    $("#subOutput").text(subResult);
   });
 });
